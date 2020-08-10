@@ -5,7 +5,7 @@
  * scrolls to anchors from navigation,
  * and highlights section in viewport upon scrolling.
  * 
- * Dependencies: in-view.js
+ * Dependencies: None
  * 
  * JS Version: ES2015/ES6
  * 
@@ -122,5 +122,3 @@ window.addEventListener('load', ()=>{
 
 // Scroll to section on link click
 window.addEventListener('click', smoothScroll);
-
-
