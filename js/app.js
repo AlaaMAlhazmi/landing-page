@@ -41,8 +41,8 @@ function createSections(){
 		<div class="landing__container">
 			<h2> ${service.title} </h2>
 			<div class="landing__container__content">
-				<p> ${service.description} </p>
-				<img src="${service.image}">
+				<div class="descriptipn"><p> ${service.description} </p></div>
+				<div class="image"><img src="${service.image}"></div>
 			</div>
 		</div>`;
 		//append section to view 
@@ -112,6 +112,11 @@ function smoothScroll(evt){
 ///////// Execution Starts Here /////////
 // Build menu 
 window.addEventListener('load', ()=>{
+
+	// Scroll to section on link click
+	const nav = document.querySelector('.navbar__menu');
+	nav.addEventListener('click', smoothScroll);
+
 	//create page content
 	createSections();
 	//create nav bar
@@ -121,4 +126,4 @@ window.addEventListener('load', ()=>{
 })
 
 // Scroll to section on link click
-window.addEventListener('click', smoothScroll);
+// window.addEventListener('click', smoothScroll);

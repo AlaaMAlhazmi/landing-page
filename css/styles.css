@@ -22,7 +22,7 @@ body {
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 2em 1rem;
 }
 
@@ -36,12 +36,13 @@ h1 {
 h2 {
     border-bottom: 1px solid #fcb020;
     font-family: 'Oxygen', Sans-Serif;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #fcb020;
 }
 
 p {
     line-height: 1.6em;
+    font-size: 1.5em;
     color: #eee;
 }
 
@@ -67,11 +68,12 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    /*text-align: right;*/
+    text-align: right;
 }
 
 .navbar__menu li {
     display: inline-block;
+    font-size: .8em;
 }
 
 .navbar__menu .menu__link {
@@ -99,6 +101,11 @@ section {
     z-index: 5;
 }
 
+.landing__container__content .descriptipn{
+    padding: 2em;
+    font-size: .8em;
+}
+
 /* Footer Styles */
 .page__footer {
     background: #000;
@@ -122,24 +129,35 @@ section {
     display: grid;
 }
 
-.landing__container__content p{
-    padding: 2em;
-}
 
 @media only screen and (min-width: 35em){
     .landing__container {
-        max-width: 50em;
+        max-width: 70em;
         padding: 4em;
     }
 
     .landing__container__content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    .landing__container__content .descriptipn{
+        grid-column: span 2;
+        font-size: 1em;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    h2{
+        font-size: 2.5em;
     }
 
     /* make odd order images to the right of text*/
-    section:nth-of-type(odd) img{
-        order: -1;
+    section:nth-of-type(odd) .descriptipn{
+        order: 1;
     }
 }
 
@@ -229,7 +247,7 @@ section.your-active-class .landing__container::after {
 }
 
 a.your-active-class{
-    background: #fff;
+    background: #fcb020;
 }
 
 /* Section Active Styles Keyframe Animations */
